@@ -1,0 +1,59 @@
+
+Accelerator Kernel Timing data
+/polusfs/home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07/main_mpi_gpu_160_180.c
+  main  NVIDIA  devicenum=0
+    time(us): 30,625,814
+    485: data region reached 2 times
+        485: data copyin transfers: 11
+             device time(us): total=116 max=27 min=5 avg=10
+        628: data copyout transfers: 11
+             device time(us): total=109 max=12 min=8 avg=9
+    487: compute region reached 436649 times
+        487: kernel launched 436649 times
+            grid: [228]  block: [128]
+             device time(us): total=3,950,982 max=14 min=9 avg=9
+            elapsed time(us): total=11,715,920 max=1,697 min=24 avg=26
+    534: update directive reached 436649 times
+        534: data copyout transfers: 436649
+             device time(us): total=3,289,853 max=4,308 min=4 avg=7
+    558: compute region reached 436649 times
+        558: kernel launched 436649 times
+            grid: [228]  block: [128]
+             device time(us): total=1,310,222 max=5 min=3 avg=3
+            elapsed time(us): total=9,226,086 max=4,333 min=19 avg=21
+        558: reduction kernel launched 436649 times
+            grid: [2]  block: [256]
+             device time(us): total=1,310,205 max=5 min=3 avg=3
+            elapsed time(us): total=8,844,843 max=36,922 min=18 avg=20
+    558: data region reached 873298 times
+        558: data copyin transfers: 436649
+             device time(us): total=2,069,732 max=86 min=4 avg=4
+        562: data copyout transfers: 436649
+             device time(us): total=3,292,476 max=6,498 min=5 avg=7
+    573: update directive reached 436649 times
+        573: data copyin transfers: 436649
+             device time(us): total=2,807,953 max=850 min=5 avg=6
+    575: compute region reached 436649 times
+        575: kernel launched 436649 times
+            grid: [228]  block: [128]
+             device time(us): total=3,929,277 max=12 min=8 avg=8
+            elapsed time(us): total=11,747,347 max=6,775 min=24 avg=26
+    601: compute region reached 436649 times
+        601: kernel launched 436649 times
+            grid: [228]  block: [128]
+             device time(us): total=1,310,214 max=6 min=3 avg=3
+            elapsed time(us): total=9,215,578 max=6,194 min=19 avg=21
+        601: reduction kernel launched 436649 times
+            grid: [2]  block: [256]
+             device time(us): total=1,310,196 max=5 min=3 avg=3
+            elapsed time(us): total=8,812,996 max=1,256 min=18 avg=20
+    601: data region reached 873298 times
+        601: data copyin transfers: 436649
+             device time(us): total=1,885,715 max=103 min=1 avg=4
+        605: data copyout transfers: 436649
+             device time(us): total=3,285,118 max=169 min=5 avg=7
+    616: compute region reached 436649 times
+        616: kernel launched 436649 times
+            grid: [228]  block: [128]
+             device time(us): total=873,646 max=5 min=2 avg=2
+            elapsed time(us): total=9,007,550 max=4,450 min=18 avg=20

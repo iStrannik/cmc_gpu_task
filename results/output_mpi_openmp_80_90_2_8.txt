@@ -1,0 +1,42 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1258319: <mpi_openmp_80_90_2_8> in cluster <MSUCluster> Done
+
+Job <mpi_openmp_80_90_2_8> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Mon Dec  9 11:15:23 2024
+Job was executed on host(s) <2*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Mon Dec  9 11:17:00 2024
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the home directory.
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the working directory.
+Started at Mon Dec  9 11:17:00 2024
+Terminated at Mon Dec  9 11:17:26 2024
+Results reported at Mon Dec  9 11:17:26 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+OMP_NUM_THREADS=8 mpiexec ./main_mpi_openmp_80_90
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   393.07 sec.
+    Max Memory :                                 124 MB
+    Average Memory :                             103.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                28
+    Run time :                                   26 sec.
+    Turnaround time :                            123 sec.
+
+The output (if any) follows:
+
+216073 24.565
+
+
+PS:
+
+Read file <error_mpi_openmp_80_90_2_8.txt> for stderr output of this job.
+

@@ -1,0 +1,30 @@
+
+Accelerator Kernel Timing data
+/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../include/c++/4.8.5/iostream
+  _Z5saxpyifPfS_  NVIDIA  devicenum=0
+    time(us): 270,299
+    5: compute region reached 1 time
+        7: kernel launched 1 time
+            grid: [1]  block: [1]
+             device time(us): total=269,791 max=269,791 min=269,791 avg=269,791
+            elapsed time(us): total=269,881 max=269,881 min=269,881 avg=269,881
+    5: data region reached 2 times
+        5: data copyin transfers: 2
+             device time(us): total=378 max=232 min=146 avg=189
+        9: data copyout transfers: 1
+             device time(us): total=130 max=130 min=130 avg=130
+
+Accelerator Kernel Timing data
+/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../include/c++/4.8.5/iostream
+  _Z5saxpyifPfS_  NVIDIA  devicenum=0
+    time(us): 270,154
+    5: compute region reached 1 time
+        7: kernel launched 1 time
+            grid: [1]  block: [1]
+             device time(us): total=269,498 max=269,498 min=269,498 avg=269,498
+            elapsed time(us): total=271,638 max=271,638 min=271,638 avg=271,638
+    5: data region reached 2 times
+        5: data copyin transfers: 2
+             device time(us): total=451 max=292 min=159 avg=225
+        9: data copyout transfers: 1
+             device time(us): total=205 max=205 min=205 avg=205

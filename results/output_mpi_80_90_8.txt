@@ -1,0 +1,49 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1245764: <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel24-619-07 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 8;#BSUB -W 00:15;#BSUB -o output_mpi_80_90_8.txt;#BSUB -e error_mpi_80_90_8.txt;OMP_NUM_THREADS=1 mpiexec ./main_mpi_80_90> in cluster <MSUCluster> Done
+
+Job <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel24-619-07 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 8;#BSUB -W 00:15;#BSUB -o output_mpi_80_90_8.txt;#BSUB -e error_mpi_80_90_8.txt;OMP_NUM_THREADS=1 mpiexec ./main_mpi_80_90> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Sun Dec  1 12:22:50 2024
+Job was executed on host(s) <8*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Sun Dec  1 12:22:52 2024
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the home directory.
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the working directory.
+Started at Sun Dec  1 12:22:52 2024
+Terminated at Sun Dec  1 12:23:12 2024
+Results reported at Sun Dec  1 12:23:12 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel24-619-07 #
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 8
+#BSUB -W 00:15
+#BSUB -o output_mpi_80_90_8.txt
+#BSUB -e error_mpi_80_90_8.txt
+OMP_NUM_THREADS=1 mpiexec ./main_mpi_80_90
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   155.66 sec.
+    Max Memory :                                 437 MB
+    Average Memory :                             349.80 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              12
+    Max Threads :                                33
+    Run time :                                   23 sec.
+    Turnaround time :                            22 sec.
+
+The output (if any) follows:
+
+216073 19.3687
+
+
+PS:
+
+Read file <error_mpi_80_90_8.txt> for stderr output of this job.
+

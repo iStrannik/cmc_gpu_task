@@ -1,0 +1,53 @@
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1286083: <mpiexec -n 2 ./main_mpi_gpu_160_180> in cluster <MSUCluster> Done
+
+Job <mpiexec -n 2 ./main_mpi_gpu_160_180> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Thu Dec 19 10:18:03 2024
+Job was executed on host(s) <2*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Thu Dec 19 10:18:04 2024
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the home directory.
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the working directory.
+Started at Thu Dec 19 10:18:04 2024
+Terminated at Thu Dec 19 10:20:34 2024
+Results reported at Thu Dec 19 10:20:34 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec -n 2 ./main_mpi_gpu_160_180
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   300.60 sec.
+    Max Memory :                                 1443 MB
+    Average Memory :                             915.67 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                21
+    Run time :                                   153 sec.
+    Turnaround time :                            151 sec.
+
+The output (if any) follows:
+
+0 2
+1 2
+436649 148.738684
+time_AW = 13.269383
+time_update_to_host_r = 11.046579
+time_scalar_r_r = 41.191979
+time_asycn_send = 1.101659
+time_update_to_device_r = 9.257551
+time_Ar = 13.428750
+time_scalar_Ar_r = 40.856796
+time_tau = 5.044951
+time_new_w = 11.431730
+
+
+PS:
+
+Read file <error_main_mpi_gpu_160_180_2_check> for stderr output of this job.
+

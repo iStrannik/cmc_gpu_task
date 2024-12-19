@@ -1,0 +1,52 @@
+
+Accelerator Kernel Timing data
+/polusfs/home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07/main_mpi_gpu_160_180.c
+  main  NVIDIA  devicenum=0
+    time(us): 365
+    486: data region reached 2 times
+        486: data copyin transfers: 12
+             device time(us): total=125 max=23 min=5 avg=10
+        629: data copyout transfers: 12
+             device time(us): total=116 max=12 min=7 avg=9
+    488: compute region reached 2 times
+        488: kernel launched 2 times
+            grid: [228]  block: [128]
+             device time(us): total=26 max=15 min=11 avg=13
+            elapsed time(us): total=159 max=130 min=29 avg=79
+    535: update directive reached 2 times
+        535: data copyout transfers: 2
+             device time(us): total=22 max=15 min=7 avg=11
+    558: compute region reached 2 times
+        558: kernel launched 2 times
+            grid: [228]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=46 max=24 min=22 avg=23
+        558: reduction kernel launched 2 times
+            grid: [2]  block: [256]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=44 max=23 min=21 avg=22
+    564: update directive reached 2 times
+        564: data copyout transfers: 2
+             device time(us): total=14 max=7 min=7 avg=7
+    574: update directive reached 2 times
+        574: data copyin transfers: 2
+             device time(us): total=12 max=6 min=6 avg=6
+    576: compute region reached 2 times
+        576: kernel launched 2 times
+            grid: [228]  block: [128]
+             device time(us): total=22 max=11 min=11 avg=11
+            elapsed time(us): total=61 max=31 min=30 avg=30
+    602: compute region reached 2 times
+        602: kernel launched 2 times
+            grid: [228]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=44 max=22 min=22 avg=22
+        602: reduction kernel launched 2 times
+            grid: [2]  block: [256]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=42 max=22 min=20 avg=21
+    617: compute region reached 2 times
+        617: kernel launched 2 times
+            grid: [228]  block: [128]
+             device time(us): total=4 max=2 min=2 avg=2
+            elapsed time(us): total=42 max=22 min=20 avg=21

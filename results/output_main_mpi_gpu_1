@@ -1,0 +1,43 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1284135: <mpiexec -n 1 ./main_mpi_gpu> in cluster <MSUCluster> Done
+
+Job <mpiexec -n 1 ./main_mpi_gpu> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Wed Dec 18 12:31:37 2024
+Job was executed on host(s) <polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Wed Dec 18 12:31:37 2024
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the home directory.
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the working directory.
+Started at Wed Dec 18 12:31:37 2024
+Terminated at Wed Dec 18 12:32:51 2024
+Results reported at Wed Dec 18 12:32:51 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec -n 1 ./main_mpi_gpu
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   74.45 sec.
+    Max Memory :                                 487 MB
+    Average Memory :                             340.23 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                15
+    Run time :                                   79 sec.
+    Turnaround time :                            74 sec.
+
+The output (if any) follows:
+
+0 1
+216073 73.275786
+
+
+PS:
+
+Read file <error_main_mpi_gpu_1> for stderr output of this job.
+

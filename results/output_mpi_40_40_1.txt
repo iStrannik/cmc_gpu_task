@@ -1,0 +1,49 @@
+Sender: LSF System <lsfadmin@polus-c2-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1244302: <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel24-619-07 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 1;#BSUB -W 00:15;#BSUB -o output_mpi_40_40_1.txt;#BSUB -e error_mpi_40_40_1.txt;OMP_NUM_THREADS=1 mpiexec ./main_mpi> in cluster <MSUCluster> Done
+
+Job <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel24-619-07 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 1;#BSUB -W 00:15;#BSUB -o output_mpi_40_40_1.txt;#BSUB -e error_mpi_40_40_1.txt;OMP_NUM_THREADS=1 mpiexec ./main_mpi> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Sat Nov 30 14:42:57 2024
+Job was executed on host(s) <polus-c2-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Sat Nov 30 14:42:57 2024
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the home directory.
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the working directory.
+Started at Sat Nov 30 14:42:57 2024
+Terminated at Sat Nov 30 14:43:12 2024
+Results reported at Sat Nov 30 14:43:12 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel24-619-07 #
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 1
+#BSUB -W 00:15
+#BSUB -o output_mpi_40_40_1.txt
+#BSUB -e error_mpi_40_40_1.txt
+OMP_NUM_THREADS=1 mpiexec ./main_mpi
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   15.08 sec.
+    Max Memory :                                 70 MB
+    Average Memory :                             52.75 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                12
+    Run time :                                   17 sec.
+    Turnaround time :                            15 sec.
+
+The output (if any) follows:
+
+119407 14.8124
+
+
+PS:
+
+Read file <error_mpi_40_40_1.txt> for stderr output of this job.
+
