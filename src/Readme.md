@@ -139,3 +139,29 @@ bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_pr
 bsub -n 2 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2_check -e error_main_mpi_gpu_160_180_2_check "mpiexec -n 2 ./main_mpi_gpu_160_180"
 ```
 
+Mpi+Gpu
+
+```
+module load openmpi
+module load pgi
+
+# run serial program
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_simple_5000_5000 main_mpi_simple_5000_5000.c
+bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_1 -e error_main_mpi_simple_5000_5000_1 "mpiexec -n 1 ./main_mpi_simple_5000_5000"
+
+# run mpi program
+bsub -n 10 -m "polus-c3-ib polus-c4-ib" -R  "span[hosts=1]" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_10 -e error_main_mpi_simple_5000_5000_10 "mpiexec -n 10 ./main_mpi_simple_5000_5000"
+bsub -n 20 -m "polus-c3-ib polus-c4-ib" -R  "span[hosts=1]" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_20 -e error_main_mpi_simple_5000_5000_20 "mpiexec -n 20 ./main_mpi_simple_5000_5000"
+
+# run mpi + gpu program
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_gpu_5000_5000 main_mpi_gpu_5000_5000.c
+bsub -n 1 -m "polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_gpu_5000_5000_1 -e error_main_mpi_gpu_5000_5000_1 "mpiexec -n 1 ./main_mpi_gpu_5000_5000"
+bsub -n 2 -m "polus-c3-ib polus-c4-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_5000_5000_2 -e error_main_mpi_gpu_5000_5000_2 "mpiexec -n 2 ./main_mpi_gpu_5000_5000"
+
+# run mpi + openmp program
+mpixlc -o main_mpi_openmp_5000_5000 -qsmp=omp -O3 main_mpi_openmp_5000_5000.c
+bsub -n 1 -q short -o output_mpi_openmp_5000_5000_1_160_check  -e error_mpi_openmp_5000_5000_1_160_check -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_160_check -R "span[hosts=1] affinity[core(20)]"  "OMP_NUM_THREADS=160 mpiexec -n 1 ./main_mpi_openmp_5000_5000"
+bsub -n 2 -q short -o output_mpi_openmp_5000_5000_2_80_check  -e error_mpi_openmp_5000_5000_2_80_check -m "polus-c2-ib polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_2_80_check -R "span[hosts=1] affinity[core(10)]"  "OMP_NUM_THREADS=80 mpiexec -n 2 ./main_mpi_openmp_5000_5000"
+
+```
+

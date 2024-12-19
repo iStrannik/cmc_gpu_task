@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include <stdlib.h>
+#include "omp.h"
 #include "mpi.h"
 
 const size_t N = 5000;
@@ -483,11 +484,10 @@ int main(int argc, char **argv) {
     size_t it = 0;
     double error_rate;
     double tau = 0.0;
-    #pragma acc data copy(w[0:global_step_x * global_step_y], r[0:global_step_x * global_step_y], Ar[0:global_step_x * global_step_y], operatorA_a[0:global_step_x * global_step_y], operatorA_b[0:global_step_x * global_step_y], operatorA_f[0:global_step_x * global_step_y], extended_A[0:2 * (global_step_x + global_step_y)], extended_B[0:2 * (global_step_x + global_step_y)], extended_w[0:2 * (global_step_x + global_step_y)], recieve_buffer_r[0:2 * (global_step_x + global_step_y)], send_buffer_r[0:2 * (global_step_x + global_step_y)])
     do {
         double time_AW_start = MPI_Wtime();
         { // apply_operator(w, r, true);    
-            #pragma acc parallel loop
+            #pragma omp parallel for
             for (size_t idx = 0; idx < global_step_x * global_step_y; ++idx) {
                 int i = idx / global_step_y;
                 int j = idx % global_step_y;
@@ -531,7 +531,7 @@ int main(int argc, char **argv) {
 
         double time_update_to_host_r_start = MPI_Wtime();
         // apply_operator(r, Ar, false);
-        #pragma acc update self(send_buffer_r[0:2 * (global_step_x + global_step_y)])
+        // #pragma acc update self(send_buffer_r[0:2 * (global_step_x + global_step_y)])
 
         time_update_to_host_r += MPI_Wtime() - time_update_to_host_r_start;
 
@@ -558,7 +558,8 @@ int main(int argc, char **argv) {
 
         double time_scalar_r_r_start = MPI_Wtime();
         double result = 0;
-        #pragma acc parallel loop reduction(+:result)
+        // #pragma acc parallel loop reduction(+:result)
+        #pragma omp parallel for reduction (+: result)
         for (size_t idx = 0; idx < global_step_x * global_step_y; ++idx) {
             result += r[idx] * r[idx];
         }
@@ -571,11 +572,11 @@ int main(int argc, char **argv) {
         time_asycn_send += MPI_Wtime() - time_asycn_send_waiting;
 
         double time_update_to_device_r_start = MPI_Wtime();
-        #pragma acc update device(recieve_buffer_r[0:2 * (global_step_x + global_step_y)])
+        // #pragma acc update device(recieve_buffer_r[0:2 * (global_step_x + global_step_y)])
         time_update_to_device_r += MPI_Wtime() - time_update_to_device_r_start;
 
         double time_Ar_start = MPI_Wtime();
-        #pragma acc parallel loop
+        #pragma omp parallel for
         for (size_t idx = 0; idx < global_step_x * global_step_y; ++idx) {
             int i = idx / global_step_y;
             int j = idx % global_step_y;
@@ -601,7 +602,8 @@ int main(int argc, char **argv) {
 
         result = 0;
         double time_scalar_Ar_r_start = MPI_Wtime();
-        #pragma acc parallel loop reduction(+:result)
+        // #pragma acc parallel loop reduction(+:result)
+        #pragma omp parallel for reduction (+: result)
         for (size_t idx = 0; idx < global_step_x * global_step_y; ++idx) {
             result += Ar[idx] * r[idx];
         }
@@ -616,7 +618,7 @@ int main(int argc, char **argv) {
         time_tau += MPI_Wtime() - time_tau_start;
 
         double time_new_w_start = MPI_Wtime();
-        #pragma acc parallel loop
+        #pragma omp parallel for
         for (size_t idx = 0; idx < global_step_x * global_step_y; ++idx) {
             w[idx] -= tau * r[idx];
             if (idx < 2 * (global_step_x + global_step_y)) {

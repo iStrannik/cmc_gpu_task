@@ -626,7 +626,7 @@ int main(int argc, char **argv) {
         time_new_w += MPI_Wtime() - time_new_w_start;
         error_rate = sqrt(tau * tau * scalar_results[0]);
         it += 1;
-        // printf("%ld %e %e\n", it, error_rate, tau);
+        printf("%ld %e %e\n", it, error_rate, tau);
    } while(error_rate > stop_method);
 
     if (myrank == 0) {

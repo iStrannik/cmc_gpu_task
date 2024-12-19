@@ -1,0 +1,52 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1286856: <mpi_openmp_5000_5000_1_160_check> in cluster <MSUCluster> Done
+
+Job <mpi_openmp_5000_5000_1_160_check> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Thu Dec 19 19:27:57 2024
+Job was executed on host(s) <polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Thu Dec 19 23:33:17 2024
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the home directory.
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the working directory.
+Started at Thu Dec 19 23:33:17 2024
+Terminated at Thu Dec 19 23:33:48 2024
+Results reported at Thu Dec 19 23:33:48 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+OMP_NUM_THREADS=160 mpiexec -n 1 ./main_mpi_openmp_5000_5000
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   4732.82 sec.
+    Max Memory :                                 1235 MB
+    Average Memory :                             1058.71 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                170
+    Run time :                                   31 sec.
+    Turnaround time :                            14751 sec.
+
+The output (if any) follows:
+
+0 1
+295 29.659326
+time_AW = 13.305916
+time_update_to_host_r = 0.000069
+time_scalar_r_r = 1.926453
+time_asycn_send = 0.000397
+time_update_to_device_r = 0.000074
+time_Ar = 10.114840
+time_scalar_Ar_r = 2.508837
+time_tau = 0.004483
+time_new_w = 1.796227
+
+
+PS:
+
+Read file <error_mpi_openmp_5000_5000_1_160_check> for stderr output of this job.
+

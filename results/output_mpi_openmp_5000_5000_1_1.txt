@@ -1,0 +1,52 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1286648: <mpi_openmp_5000_5000_1_1> in cluster <MSUCluster> Done
+
+Job <mpi_openmp_5000_5000_1_1> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Thu Dec 19 16:56:24 2024
+Job was executed on host(s) <polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-skmodel24-619-07> in cluster <MSUCluster> at Thu Dec 19 16:56:24 2024
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the home directory.
+</home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07> was used as the working directory.
+Started at Thu Dec 19 16:56:24 2024
+Terminated at Thu Dec 19 17:11:50 2024
+Results reported at Thu Dec 19 17:11:50 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+OMP_NUM_THREADS=1 mpiexec ./main_mpi_openmp_5000_5000
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   674.70 sec.
+    Max Memory :                                 1215 MB
+    Average Memory :                             1205.21 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                11
+    Run time :                                   931 sec.
+    Turnaround time :                            926 sec.
+
+The output (if any) follows:
+
+0 1
+295 923.863624
+time_AW = 475.390827
+time_update_to_host_r = 0.000017
+time_scalar_r_r = 4.994311
+time_asycn_send = 0.000245
+time_update_to_device_r = 0.000016
+time_Ar = 423.392534
+time_scalar_Ar_r = 6.819814
+time_tau = 0.002642
+time_new_w = 13.262345
+
+
+PS:
+
+Read file <error_mpi_openmp_5000_5000_1_1.txt> for stderr output of this job.
+

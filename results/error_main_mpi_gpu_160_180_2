@@ -116,3 +116,107 @@ Accelerator Kernel Timing data
             grid: [115]  block: [128]
              device time(us): total=873,551 max=4 min=2 avg=2
             elapsed time(us): total=9,866,867 max=578 min=21 avg=22
+
+Accelerator Kernel Timing data
+/polusfs/home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07/main_mpi_gpu_160_180.c
+  main  NVIDIA  devicenum=0
+    time(us): 402
+    486: data region reached 2 times
+        486: data copyin transfers: 12
+             device time(us): total=130 max=14 min=7 avg=10
+        629: data copyout transfers: 12
+             device time(us): total=133 max=12 min=10 avg=11
+    488: compute region reached 2 times
+        488: kernel launched 2 times
+            grid: [115]  block: [128]
+             device time(us): total=22 max=13 min=
+Accelerator Kernel Timing data
+/polusfs/home_edu/edu-cmc-skmodel24-619/edu-cmc-skmodel24-619-07/main_mpi_gpu_160_180.c
+  main  NVIDIA  devicenum=1
+    time(us): 396
+    486: data region reached 2 times
+        486: data copyin transfers: 12
+             device time(us): total=127 max=26 min=7 avg=10
+        629: data copyout transfers: 12
+             device time(us): total=133 max=12 min=10 avg=11
+9 avg=11
+            elapsed time(us): total=237 max=205 min=32 avg=118
+    535: update directive reached 2 times
+        535: data copyout transfers: 2
+             device time(us): total=34 max=23 min=11    488: compute region reached 2 times
+        488: kernel launched 2 times
+            grid: [114]  block: [128]
+             device time(us): total=21 max=13 min=8 avg=10
+            elapsed time(us): total=238 max=206 avg=17
+    558: compute region reached 2 times
+        558: kernel launched 2 times
+            grid: [115]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+ min=32 avg=119
+    535: update directive reached 2 times
+        535: data copyout transfers: 2
+             device time(us): total=33 max=23 min=10 avg=16
+    558: compute region reached 2 times
+            elapsed time(us): total=59 max=31 min=28 avg=29
+        558: reduction kernel launched 2 times
+            grid: [2]  block: [256]
+             device time(us): total=6 max=        558: kernel launched 2 times
+            grid: [114]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=57 max=313 min=3 avg=3
+            elapsed time(us): total=50 max=26 min=24 avg=25
+    564: update directive reached 2 times
+        564: data copyout transfers: 2
+             device time(us): total= min=26 avg=28
+        558: reduction kernel launched 2 times
+            grid: [2]  block: [256]
+             device time(us): total=6 max=3 min=3 avg=320 max=11 min=9 avg=10
+    574: update directive reached 2 times
+        574: data copyin transfers: 2
+             device time(us): total=17 max=9 min=8 avg=8
+
+            elapsed time(us): total=52 max=27 min=25 avg=26
+    564: update directive reached 2 times
+        564: data copyout transfers: 2
+             device time(us): total=20 max=11 min=9    576: compute region reached 2 times
+        576: kernel launched 2 times
+            grid: [115]  block: [128]
+             device time(us): total=18 max=10 min=8 avg=9
+            elapsed time(us): total= avg=10
+    574: update directive reached 2 times
+        574: data copyin transfers: 2
+             device time(us): total=16 max=8 min=8 avg=8
+    576: compute region reached 2 times
+        576: kernel launched 2 times
+            grid: [67 max=35 min=32 avg=33
+    602: compute region reached 2 times
+        602: kernel launched 2 times
+            grid: [115]  block: [128]
+             device time(us): total=6 max=114]  block: [128]
+             device time(us): total=18 max=10 min=8 avg=9
+            elapsed time(us): total=67 max=34 min=333 min=3 avg=3
+            elapsed time(us): total=53 max=27 min=26 avg=26
+        602: reduction kernel launched 2 times
+            grid: [2]  block: [256 avg=33
+    602: compute region reached 2 times
+        602: kernel launched 2 times
+            grid: [114]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=51 max=27 min=24 avg=25
+
+            elapsed time(us): total=52 max=27 min=25 avg=26
+        602: reduction kernel launched 2 times
+            grid: [2]  block: [256]
+             device time(us): total=6    617: compute region reached 2 times
+        617: kernel launched 2 times
+            grid: [115]  block: [128]
+             device time(us): total=4 max=2 min=2 avg=2
+            elapsed time(us): total=58 max=32 min=26 avg=29
+ max=3 min=3 avg=3
+            elapsed time(us): total=51 max=26 min=25 avg=25
+    617: compute region reached 2 times
+        617: kernel launched 2 times
+            grid: [114]  block: [128]
+             device time(us): total=4 max=2 min=2 avg=2
+            elapsed time(us): total=54 max=28 min=26 avg=27

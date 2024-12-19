@@ -3341,3 +3341,535 @@ bjobs -u all
 bjobs
 #1734569122
 bjobs -u all
+#1734589997
+bjobs
+#1734590015
+cat output_mpi_simple_160_180_1
+#1734590042
+cat output_main_mpi_gpu_160_180_1
+#1734590071
+cat output_main_mpi_gpu_160_180_2
+#1734590081
+cat error_main_mpi_gpu_160_180_2
+#1734590101
+rm error_main_mpi_gpu_160_180_2
+#1734590112
+rm output_main_mpi_gpu_160_180_2
+#1734590141
+bsub -n 2 -m "polus-c4-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e error_main_mpi_gpu_160_180_2 "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734590144
+bjobs
+#1734590172
+cat output_main_mpi_gpu_160_180_2
+#1734590181
+cat error_main_mpi_gpu_160_180_2
+#1734590187
+rm error_main_mpi_gpu_160_180_2
+#1734590194
+rm output_main_mpi_gpu_160_180_2
+#1734590199
+module load openmpi
+#1734590206
+module load pgi
+#1734590219
+bsub -n 2 -m "polus-c3-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o  -e error_main_mpi_gpu_160_180_2 "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734590223
+bjobs
+#1734590262
+rm error_main_mpi_gpu_160_180_2
+#1734590284
+bsub -n 2 -m "polus-c3-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e  "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734590308
+bsub -n 2 -m "polus-c3-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e error_main_mpi_gpu_160_180_2 "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734590312
+bjohs
+#1734590315
+bjobs
+#1734590983
+cat output_main_mpi_gpu_160_180_2
+#1734590999
+cat error_main_mpi_gpu_160_180_2
+#1734591189
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_gpu_160_180 main_mpi_gpu_160_180.c
+#1734591224
+rm output_main_mpi_gpu_160_180_2
+#1734591230
+rm error_main_mpi_gpu_160_180_2
+#1734591243
+bsub -n 2 -m "polus-c3-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e error_main_mpi_gpu_160_180_2 "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734591247
+bjobs
+#1734591340
+cat output_main_mpi_gpu_160_180_2
+#1734591402
+rm output_main_mpi_gpu_160_180_2
+#1734591409
+rm error_main_mpi_gpu_160_180_2
+#1734591433
+bsub -n 2 -m "polus-c3-ib polus-c4-ib" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e error_main_mpi_gpu_160_180_2 "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734591515
+bjobs
+#1734591530
+cat output_main_mpi_gpu_160_180_2
+#1734591547
+cat error_main_mpi_gpu_160_180_2
+#1734591561
+rm error_main_mpi_gpu_160_180_2
+#1734591563
+rm output_main_mpi_gpu_160_180_2
+#1734591605
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_gpu_160_180 main_mpi_gpu_160_180.c
+#1734591616
+bsub -n 2 -m "polus-c3-ib polus-c4-ib" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e c "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734591624
+bjobs
+#1734591630
+bjobs -u all
+#1734591649
+bjobs
+#1734591674
+clear
+#1734591679
+cat output_main_mpi_gpu_160_180_2
+#1734591683
+bjobs
+#1734591849
+cat output_main_mpi_gpu_160_180_2
+#1734591905
+rm output_main_mpi_gpu_160_180_2
+#1734591910
+rm error_main_mpi_gpu_160_180_2
+#1734591927
+rm c
+#1734591955
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_gpu_160_180 main_mpi_gpu_160_180.c
+#1734591965
+bsub -n 2 -m "polus-c3-ib polus-c4-ib" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e error_main_mpi_gpu_160_180_2 "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734591968
+bjobs
+#1734592264
+cat output_main_mpi_gpu_160_180_2
+#1734592307
+cat output_main_mpi_gpu_160_180_1
+#1734592371
+rm output_main_mpi_gpu_160_180_1
+#1734592377
+rm error_main_mpi_gpu_160_180_1
+#1734592385
+bsub -n 1 -m "polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_1 -e error_main_mpi_gpu_160_180_1 "mpiexec -n 1 ./main_mpi_gpu_160_180"
+#1734592389
+bjobs
+#1734592517
+clear
+#1734592520
+bjobs
+#1734592526
+cat output_main_mpi_gpu_160_180_1
+#1734592639
+cat output_main_mpi_gpu_160_180_2
+#1734592642
+cat output_main_mpi_gpu_160_180_1
+#1734592644
+cat output_main_mpi_gpu_160_180_2
+#1734592683
+bsub -n 2 -m "polus-c3-ib polus-c4-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2_check -e error_main_mpi_gpu_160_180_2_check "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734592693
+bjobs
+#1734592816
+clear
+#1734592819
+bjobs
+#1734592823
+bjobs -u all
+#1734592850
+bjobs
+#1734592857
+cat output_main_mpi_gpu_160_180_2_check
+#1734592920
+bsub -n 1 -m "polus-c2-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_1_check -e error_main_mpi_gpu_160_180_1_check "mpiexec -n 1 ./main_mpi_gpu_160_180"
+#1734592923
+bjobs
+#1734593219
+cat output_main_mpi_gpu_160_180_1_check
+#1734593354
+cat output_mpi_simple_160_180_1
+#1734593462
+cat output_main_mpi_gpu_160_180_1_check
+#1734593610
+cat output_main_mpi_gpu_160_180_2_check
+#1734594796
+module load openmpi
+#1734594801
+module load pgi
+#1734594807
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_gpu_160_180 main_mpi_gpu_160_180.c
+#1734594836
+bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_1_check_2 -e error_main_mpi_gpu_160_180_1_check_2 "mpiexec -n 1 ./main_mpi_gpu_160_180"
+#1734594881
+bjobs
+#1734594888
+cat output_main_mpi_gpu_160_180_1_check_2
+#1734595139
+rm core.*
+#1734605896
+module load openmpi
+#1734605900
+module load pgi
+#1734605911
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_gpu_5000_5000 main_mpi_gpu_5000_5000.c
+#1734605995
+bsub -n 1 -m "polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_gpu_5000_5000_1 -e error_main_mpi_gpu_5000_5000_1 "mpiexec -n 1 ./main_mpi_gpu_5000_5000"
+#1734605997
+bjobs
+#1734606108
+bjobs -u all
+#1734606184
+bjobs
+#1734606190
+bkill 1286366
+#1734606207
+bjobs
+#1734606208
+bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_gpu_5000_5000_1 -e error_main_mpi_gpu_5000_5000_1 "mpiexec -n 1 ./main_mpi_gpu_5000_5000"
+#1734606209
+bjobs
+#1734606378
+bjobs -u all
+#1734606656
+bjobs
+#1734606658
+bjobs -u all
+#1734606719
+bjobs
+#1734606783
+bjobs -u all
+#1734606793
+clear
+#1734606794
+bjobs -u all
+#1734606826
+bjobs
+#1734606838
+cat output_main_mpi_gpu_5000_5000_1
+#1734606846
+cat error_main_mpi_gpu_5000_5000_1
+#1734606848
+cat output_main_mpi_gpu_5000_5000_1
+#1734606850
+bjobs
+#1734607162
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_simple_5000_5000 main_mpi_simple_5000_5000.c
+#1734607185
+bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_1 -e error_main_mpi_simple_5000_5000_1 "mpiexec -n 1 ./main_mpi_simple_5000_5000"
+#1734607187
+bjobs
+#1734607199
+bjobs -u all
+#1734607218
+bjobs
+#1734607765
+python3
+#1734608046
+bjobs
+#1734608107
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_simple_5000_5000 main_mpi_simple_5000_5000.c
+#1734608129
+bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_1_check -e error_main_mpi_simple_5000_5000_1_check "mpiexec -n 1 ./main_mpi_simple_5000_5000"
+#1734610496
+bjobs
+#1734610504
+cat output_main_mpi_simple_5000_5000_1_check
+#1734610541
+cat output_main_mpi_simple_5000_5000_1_check | grep 4.3
+#1734610582
+cat output_main_mpi_simple_5000_5000_1_check | grep 4.4
+#1734610683
+tail -n 50 output_main_mpi_gpu_5000_5000_1_check
+#1734610686
+tail -n 50 output_main_mpi_gpu_5000_5000_1 
+#1734610705
+tail -n 50 output_main_mpi_simple_5000_5000_1
+#1734610996
+rm output_main_mpi_simple_5000_5000_1
+#1734611011
+rm output_main_mpi_gpu_5000_5000_1 
+#1734611023
+rm error_main_mpi_gpu_5000_5000_1 
+#1734611028
+rm error_main_mpi_simple_5000_5000_1
+#1734611037
+module load openmpi
+#1734611041
+module load pgi
+#1734611048
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_simple_5000_5000 main_mpi_simple_5000_5000.c
+#1734611073
+bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_1 -e error_main_mpi_simple_5000_5000_1 "mpiexec -n 1 ./main_mpi_simple_5000_5000"
+#1734611080
+mpicxx -O3 -lm -acc -ta=tesla:cc60,time -Minfo=accel -o main_mpi_gpu_5000_5000 main_mpi_gpu_5000_5000.c
+#1734611098
+bsub -n 1 -m "polus-c2-ib polus-c3-ib polus-c4-ib" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_gpu_5000_5000_1 -e error_main_mpi_gpu_5000_5000_1 "mpiexec -n 1 ./main_mpi_gpu_5000_5000"
+#1734611123
+bsub -n 2 -m "polus-c3-ib polus-c4-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_160_180_2 -e error_main_mpi_gpu_160_180_2 "mpiexec -n 2 ./main_mpi_gpu_160_180"
+#1734611125
+bjobs
+#1734611143
+bjobs -u all
+#1734611267
+bjobs
+#1734611278
+bjobs -u all
+#1734611407
+bjobs
+#1734611744
+bjobs -u all
+#1734612641
+bjobs
+#1734612697
+bsub -n 2 -m "polus-c3-ib polus-c4-ib" -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=2:mode=exclusive_process" -q short -o output_main_mpi_gpu_5000_5000_2 -e error_main_mpi_gpu_5000_5000_2 "mpiexec -n 2 ./main_mpi_gpu_5000_5000"
+#1734612714
+cat output_main_mpi_gpu_5000_5000_1
+#1734612811
+bjobs
+#1734612824
+cat error_main_mpi_gpu_5000_5000_2
+#1734612833
+cat output_main_mpi_gpu_5000_5000_2
+#1734612840
+cat output_main_mpi_gpu_5000_5000_1
+#1734612854
+cat output_main_mpi_simple_5000_5000_1
+#1734613092
+bsub -n 10 -m "polus-c3-ib polus-c4-ib" -R  "affinity[core(10,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_10 -e error_main_mpi_simple_5000_5000_10 "mpiexec -n 10 ./main_mpi_simple_5000_5000"
+#1734613094
+bjobs
+#1734613111
+bjobs -u all
+#1734613289
+bjobs
+#1734613291
+bjobs -u all
+#1734613337
+bjobs
+#1734613363
+bjobs -u all
+#1734613488
+bjobs
+#1734613490
+bjobs -u all
+#1734613774
+bjobs
+#1734613775
+bjobs -u all
+#1734613792
+clear
+#1734613792
+bjobs -u all
+#1734613839
+bsub -n 20 -m "polus-c3-ib polus-c4-ib" -R  "affinity[core(20,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_20 -e error_main_mpi_simple_5000_5000_20 "mpiexec -n 20 ./main_mpi_simple_5000_5000"
+#1734613842
+bjobs
+#1734613852
+clear
+#1734613854
+bjobs -u all
+#1734614228
+bjobs
+#1734614233
+bjobs -u all
+#1734615184
+bjobs
+#1734615185
+bjobs -u all
+#1734615562
+bjobs
+#1734615563
+bjobs -u all
+#1734615713
+bjobs
+#1734615724
+bjobs -u all
+#1734615742
+bjobs
+#1734615839
+bkill 1286524
+#1734615844
+bkill 1286538
+#1734615894
+bjobs
+#1734615895
+bsub -n 10 -m "polus-c3-ib polus-c4-ib" -R  "span[hosts=1]" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_10 -e error_main_mpi_simple_5000_5000_10 "mpiexec -n 10 ./main_mpi_simple_5000_5000"
+#1734615904
+bsub -n 20 -m "polus-c3-ib polus-c4-ib" -R  "span[hosts=1]" -gpu "num=1:mode=exclusive_process" -q short -o output_main_mpi_simple_5000_5000_20 -e error_main_mpi_simple_5000_5000_20 "mpiexec -n 20 ./main_mpi_simple_5000_5000"
+#1734615907
+bjobs
+#1734616106
+cat output_main_mpi_simple_5000_5000_10
+#1734616121
+cat output_main_mpi_simple_5000_5000_20
+#1734616487
+module load SpectrumMPI
+#1734616545
+mpicc -o main_mpi_openmp_5000_5000 -qsmp=omp -O3 main_mpi_openmp_5000_5000.c
+#1734616584
+bsub -n 1 -q normal -o output_mpi_openmp_5000_5000_1_1.txt  -e error_mpi_openmp_5000_5000_1_1.txt -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_1 -R  "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]"  "OMP_NUM_THREADS=1 mpiexec ./main_mpi_openmp_5000_5000"
+#1734616644
+bjobs
+#1734616777
+bsub -n 1 -q normal -o output_mpi_openmp_5000_5000_1_2.txt  -e error_mpi_openmp_5000_5000_1_20.txt -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_1 -R "span[hosts=1]" "affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]"  "OMP_NUM_THREADS=20 mpiexec ./main_mpi_openmp_5000_5000"
+#1734616779
+bjobs
+#1734616805
+cat output_mpi_openmp_5000_5000_1_2.txt 
+#1734616826
+rm output_mpi_openmp_5000_5000_1_2
+#1734616829
+rm output_mpi_openmp_5000_5000_1_2.txt 
+#1734616839
+cat error_mpi_openmp_5000_5000_1_20.txt 
+#1734616854
+rm output_mpi_openmp_5000_5000_1_2
+#1734616861
+rm error_mpi_openmp_5000_5000_1_20.txt 
+#1734616866
+bsub -n 1 -q normal -o output_mpi_openmp_5000_5000_1_2.txt  -e error_mpi_openmp_5000_5000_1_20.txt -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_1 -R "span[hosts=1] affinity[core(4,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]"  "OMP_NUM_THREADS=20 mpiexec ./main_mpi_openmp_5000_5000"
+#1734616871
+bjobs
+#1734617669
+cat output_mpi_openmp_5000_5000_1_1.txt 
+#1734617720
+cat output_main_mpi_simple_5000_5000_1
+#1734617726
+cat output_mpi_openmp_5000_5000_1_1.txt 
+#1734617741
+cat output_main_mpi_gpu_5000_5000_2
+#1734617756
+cat output_mpi_openmp_5000_5000_1_20.txt
+#1734617772
+cat error_mpi_openmp_5000_5000_1_20.txt
+#1734617847
+bsub -n 1 -q normal -o output_mpi_openmp_5000_5000_1_160.txt  -e error_mpi_openmp_5000_5000_1_160.txt -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_160 -R "span[hosts=1]"  "OMP_NUM_THREADS=160 mpiexec -n 1 ./main_mpi_openmp_5000_5000"
+#1734617858
+bjobs
+#1734617911
+bjobs -u all
+#1734618272
+bjobs
+#1734618274
+bjobs -u all
+#1734618502
+bjobs
+#1734618951
+bjobs -u all
+#1734619168
+cat /polusfs/lsf/openmp/launchOpenMP.py
+#1734619260
+bjobs
+#1734619587
+bsub -n 1 -q short -o output_mpi_openmp_5000_5000_1_160_check  -e error_mpi_openmp_5000_5000_1_160_check -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_160_check -R "span[hosts=1] affinity[core(20,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]"  "OMP_NUM_THREADS=160 mpiexec -n 1 ./main_mpi_openmp_5000_5000"
+#1734619589
+bjobs
+#1734619604
+cat output_mpi_openmp_5000_5000_1_160.txt 
+#1734619661
+mpixlc -o main_mpi_openmp_5000_5000 -qsmp=omp -O3 main_mpi_openmp_5000_5000.c
+#1734619665
+bjobs
+#1734619675
+bkill 1286729
+#1734619694
+bsub -n 1 -q short -o output_mpi_openmp_5000_5000_1_160_check  -e error_mpi_openmp_5000_5000_1_160_check -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_160_check -R "span[hosts=1] affinity[core(20,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]"  "OMP_NUM_THREADS=160 mpiexec -n 1 ./main_mpi_openmp_5000_5000"
+#1734619836
+bjobs
+#1734619850
+bjobs -u all
+#1734620246
+bjobs
+#1734620911
+bjobs -u all
+#1734621858
+bjobs
+#1734621860
+bjobs -u all
+#1734622088
+bjobs
+#1734622091
+bjobs -u all
+#1734622209
+bsub -n 2 -q short -o output_mpi_openmp_5000_5000_2_80_check  -e error_mpi_openmp_5000_5000_2_80_check -m "polus-c2-ib polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_2_80_check -R "span[hosts=1] affinity[core(10,same=socket,exclusive=(socket,alljobs)):membind=localonly:distribute=pack(socket=1)]"  "OMP_NUM_THREADS=80 mpiexec -n 2 ./main_mpi_openmp_5000_5000"
+#1734622212
+bjobs
+#1734622357
+bjobs -u all
+#1734622594
+bjobs
+#1734622595
+bjobs -u all
+#1734622836
+bjobs
+#1734622837
+bjobs -u all
+#1734622941
+bjobs
+#1734622950
+bkill 1286789
+#1734622992
+bsub -n 2 -q short -o output_mpi_openmp_5000_5000_2_80_check  -e error_mpi_openmp_5000_5000_2_80_check -m "polus-c2-ib polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_2_80_check -R "span[hosts=1] affinity[core(10)]"  "OMP_NUM_THREADS=80 mpiexec -n 2 ./main_mpi_openmp_5000_5000"
+#1734622996
+bjobs
+#1734625633
+cat output_mpi_openmp_5000_5000_2_80_check
+#1734625677
+bsub -n 1 -q short -o output_mpi_openmp_5000_5000_1_160_check  -e error_mpi_openmp_5000_5000_1_160_check -m "polus-c3-ib polus-c4-ib" -J mpi_openmp_5000_5000_1_160_check -R "span[hosts=1] affinity[core(20)]"  "OMP_NUM_THREADS=160 mpiexec -n 1 ./main_mpi_openmp_5000_5000"
+#1734625682
+bjobs
+#1734625687
+bkill 1286731
+#1734625689
+bjobs
+#1734625708
+ls output_mpi_openmp_5000_5000_1_160_check
+#1734625716
+ls output_mpi_openmp_5000_5000_1_160.txt 
+#1734626256
+bjobs
+#1734626264
+bjobs -u all
+#1734626709
+bjobs
+#1734626711
+bjobs -u all
+#1734627218
+bjobs
+#1734627220
+bjobs -u all
+#1734640600
+bjobs
+#1734640724
+cat output_mpi_openmp_5000_5000_1_160_check
+#1734640734
+cat output_mpi_openmp_5000_5000_2_80_check
+#1734640739
+cat output_mpi_openmp_5000_5000_1_160_check
+#1734640740
+cat output_mpi_openmp_5000_5000_2_80_check
+#1734640746
+cat output_mpi_openmp_5000_5000_1_160_check
+#1734640752
+cat output_mpi_openmp_5000_5000_2_80_check
+#1734641012
+cat output_mpi_openmp_5000_5000_1_160_check
+#1734641018
+cat output_mpi_openmp_5000_5000_2_80_check
+#1734641030
+cat output_main_mpi_gpu_5000_5000_1
+#1734641049
+output_main_mpi_gpu_5000_5000_2
+#1734641057
+cat output_main_mpi_gpu_5000_5000_2
+#1734641068
+cat output_main_mpi_simple_5000_5000_1
+#1734641076
+cat output_main_mpi_simple_5000_5000_10
+#1734641088
+cat output_main_mpi_simple_5000_5000_20
